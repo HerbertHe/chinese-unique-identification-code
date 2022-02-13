@@ -1,0 +1,40 @@
+{
+  "name": "chinese-unique-identification-code",
+  "version": "1.0.0",
+  "description": "The coding rules checker of Chinese Unique Identification Code!",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HerbertHe/chinese-unique-identification-code.git"
+  },
+  "keywords": [
+    "The unified social credit identifier",
+    "China",
+    "Official",
+    "Code",
+    "GB"
+  ],
+  "author": "Herbert He <Herbert.He0229@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HerbertHe/chinese-unique-identification-code/issues"
+  },
+  "homepage": "https://github.com/HerbertHe/chinese-unique-identification-code#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "tsup": "^5.11.13",
+    "typescript": "^4.5.5"
+  }
+}
