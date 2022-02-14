@@ -188,6 +188,10 @@ export const TheUnifiedSocialCreditIdentifierInformationExtractor = (
     const idx = RegistrationDepartmentCodes.indexOf(rd)
     const ocIdx = parseInt(oc) - 1
 
+    if (parseInt(oc) === 9) {
+        return [true, [RegistrationDepartmentNames[idx], "其他", adc, sic, id]]
+    }
+
     return [
         true,
         [
