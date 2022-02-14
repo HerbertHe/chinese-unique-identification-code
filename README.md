@@ -1,10 +1,11 @@
-# chinese-unique-identification-code
+# 中国各行业唯一识别码编码
 
-中国各行业唯一识别码编码规范校验
+[![version](https://img.shields.io/npm/v/chinese-unique-identification-code.svg)](https://www.npmjs.com/package/chinese-unique-identification-code)
+[![download](https://img.shields.io/npm/dm/chinese-unique-identification-code.svg)](https://www.npmjs.com/package/chinese-unique-identification-code)
 
 ## 标准文件
 
-### 身份证号
+### 公民身份号码
 
 - [GB 11643——1999《公民身份号码》](http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=080D6FBF2BB468F9007657F26D60013E)
 
