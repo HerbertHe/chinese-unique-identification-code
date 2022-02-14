@@ -1,6 +1,6 @@
 {
   "name": "chinese-unique-identification-code",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The coding rules checker of Chinese Unique Identification Code!",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
