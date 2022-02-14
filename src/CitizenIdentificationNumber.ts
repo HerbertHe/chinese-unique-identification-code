@@ -31,7 +31,7 @@ const IDRegExp = /([0-9]{6})([0-9]{8})([0-9]{3})([0-9|X]{1})/
  * 公民身份号码校验器
  * Citizen Identification Number Checker
  *
- * @param {string} id 公民身份号码校验器
+ * @param {string} id 公民身份号码
  * @returns
  *
  * @description 标准号: GB 11643-1999
@@ -56,4 +56,40 @@ export const CitizenIdentificationNumberChecker = (
     } else {
         return [false, id]
     }
+}
+
+export type CitizenIdentificationNumberInformationExtractorDetailsType = [
+    string,
+    string,
+    string,
+    string
+]
+
+export type CitizenIdentificationNumberInformationExtractorType = [
+    boolean,
+    CitizenIdentificationNumberInformationExtractorDetailsType
+]
+
+/**
+ * 公民身份号码信息提取器
+ * Citizen Identification Number Checker
+ *
+ * @param {string} id 公民身份号码
+ * @returns
+ *
+ * @description 标准号: GB 11643-1999
+ * @link http://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=080D6FBF2BB468F9007657F26D60013E
+ */
+export const CitizenIdentificationNumberInformationExtractor = (
+    id: string
+): CitizenIdentificationNumberInformationExtractorType => {
+    if (!CitizenIdentificationNumberChecker(id)[0]) {
+        return [false, null]
+    }
+
+    const [raw, addr, db, or] = IDRegExp.exec(id)
+
+    const gender = parseInt(or) % 2 === 0 ? "女" : "男"
+
+    return [true, [addr, db, gender, raw]]
 }
